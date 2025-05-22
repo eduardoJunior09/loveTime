@@ -47,7 +47,7 @@ export default function Temp() {
       setTimeDiff({ years, months, days, hours, minutes, seconds });
     };
 
-    updateDiff(); // primeira chamada imediata
+    updateDiff(); // chamada inicial
     const interval = setInterval(updateDiff, 1000);
     return () => clearInterval(interval);
   }, []);
@@ -55,25 +55,25 @@ export default function Temp() {
   const { years, months, days, hours, minutes, seconds } = timeDiff;
 
   return (
-    <div className="flex items-center justify-center flex-col gap-2 w-full border-1 border-love rounded-xl p-2">
-      <div className="flex items-center justify-center gap-2 w-full">
+    <div className="flex items-center justify-center flex-col gap-4 w-full border border-love rounded-xl p-4">
+      <div className="grid grid-cols-3 gap-6">
         {[
-          { label: "anos", value: years },
-          { label: "meses", value: months },
-          { label: "dias", value: days },
-          { label: "horas", value: hours },
-          { label: "min", value: minutes },
-          { label: "seg", value: seconds },
+          { label: "Anos", value: years },
+          { label: "Meses", value: months },
+          { label: "Dias", value: days },
+          { label: "Horas", value: hours },
+          { label: "Min", value: minutes },
+          { label: "Seg", value: seconds },
         ].map(({ label, value }, idx) => (
           <div key={idx} className="flex flex-col items-center justify-center">
-            <span className="flex items-center justify-center w-12 h-12 bg-love-radial text-white font-semibold text-2xl rounded-xl">
+            <span className="flex items-center justify-center w-20 h-20 bg-love-radial text-white font-bold text-3xl rounded-lg">
               {String(value).padStart(2, "0")}
             </span>
-            <span className="text-md text-white">{label}</span>
+            <span className="text-sm text-secondary mt-2">{label}</span>
           </div>
         ))}
       </div>
-      <p className="text-white">Desde 08/09/2021</p>
+      <p className="text-gray-600">Desde 08/09/2021</p>
     </div>
   );
 }

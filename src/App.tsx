@@ -6,7 +6,7 @@ import Temp from "./Components/Temp";
 export default function App() {
   return (
     <div className="flex items-center justify-center w-full">
-      <div className="flex flex-col items-center justify-center gap-4 py-4 p-2 max-w-xl w-full h-full">
+      <div className="flex flex-col items-center justify-center gap-4 py-4 p-2 max-w-96 w-full h-full">
         <Header
           image="https://www.psicologosberrini.com.br/wp-content/uploads/terapia-de-casal-amor-ou-costume.jpg"
           firstPerson="eduardo"
