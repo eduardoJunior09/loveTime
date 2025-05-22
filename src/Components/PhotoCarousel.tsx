@@ -25,8 +25,8 @@ export default function PhotoCarousel() {
   }, []);
 
   return (
-    <div className="flex items-center justify-center border-1 border-love rounded-xl px-2 py-4 w-full">
-      <div className="relative w-64 h-80 lg:w-72 lg:h-96">
+    <div className="flex items-center justify-center border-1 border-love rounded-xl p-2 w-full h-96">
+      <div className="relative w-full h-full">
         <img
           className="w-full h-full object-cover rounded-xl"
           src={images[currentIndex]}

@@ -56,7 +56,7 @@ export default function Temp() {
 
   return (
     <div className="flex items-center justify-center flex-col gap-4 w-full border border-love rounded-xl p-4">
-      <div className="grid grid-cols-3 gap-6">
+      <div className="grid grid-cols-3 gap-4">
         {[
           { label: "Anos", value: years },
           { label: "Meses", value: months },
@@ -66,14 +66,14 @@ export default function Temp() {
           { label: "Seg", value: seconds },
         ].map(({ label, value }, idx) => (
           <div key={idx} className="flex flex-col items-center justify-center">
-            <span className="flex items-center justify-center w-20 h-20 bg-love-radial text-white font-bold text-3xl rounded-lg">
+            <span className="flex items-center justify-center w-18 h-18 bg-love-radial text-white font-bold text-3xl rounded-lg">
               {String(value).padStart(2, "0")}
             </span>
-            <span className="text-sm text-secondary mt-2">{label}</span>
+            <span className="text-sm text-gray-600 mt-2">{label}</span>
           </div>
         ))}
       </div>
-      <p className="text-gray-600">Desde 08/09/2021</p>
+      <p className="text-gray-500">Desde 08/09/2021</p>
     </div>
   );
 }
