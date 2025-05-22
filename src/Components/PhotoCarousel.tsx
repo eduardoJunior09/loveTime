@@ -25,31 +25,30 @@ export default function PhotoCarousel() {
   }, []);
 
   return (
-    <div className="flex items-center justify-center border-1 border-love rounded-xl p-2 w-full h-96">
-      <div className="relative w-full h-full">
-        <img
-          className="w-full h-full object-cover rounded-xl"
-          src={images[currentIndex]}
-          alt={`Imagem ${currentIndex + 1}`}
-        />
+   <div className="flex items-center justify-center border border-love rounded-xl p-2 w-full max-w-sm">
+  <div className="relative w-full aspect-[9/16]">
+    <img
+      className="absolute top-0 left-0 w-full h-full object-cover rounded-xl"
+      src={images[currentIndex]}
+      alt={`Imagem ${currentIndex + 1}`}
+    />
 
-        {/* Botão Anterior */}
-        <button
-          onClick={prevImage}
-          className="absolute top-1/2 left-2 transform -translate-y-1/2 flex items-center justify-center bg-white text-gray-900 opacity-60 hover:opacity-90 rounded-full px-2 py-1 cursor-pointer"
-        >
-          <i className="bi bi-chevron-left"></i>
-        </button>
+    {/* Botão Anterior */}
+    <button
+      onClick={prevImage}
+      className="absolute top-1/2 left-2 transform -translate-y-1/2 flex items-center justify-center bg-white text-gray-900 opacity-60 hover:opacity-90 rounded-full px-2 py-1 cursor-pointer"
+    >
+      <i className="bi bi-chevron-left"></i>
+    </button>
 
-        {/* Botão Próximo */}
-        <button
-          onClick={nextImage}
-          className="absolute top-1/2 right-2 transform -translate-y-1/2
-          flex items-center justify-center bg-white text-gray-900 opacity-60 hover:opacity-90 rounded-full px-2 py-1 cursor-pointer"
-        >
-          <i className="bi bi-chevron-right"></i>
-        </button>
-      </div>
-    </div>
-  );
+    {/* Botão Próximo */}
+    <button
+      onClick={nextImage}
+      className="absolute top-1/2 right-2 transform -translate-y-1/2 flex items-center justify-center bg-white text-gray-900 opacity-60 hover:opacity-90 rounded-full px-2 py-1 cursor-pointer"
+    >
+      <i className="bi bi-chevron-right"></i>
+    </button>
+  </div>
+</div>
+);
 }

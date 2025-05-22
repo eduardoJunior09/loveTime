@@ -55,7 +55,7 @@ export default function Temp() {
   const { years, months, days, hours, minutes, seconds } = timeDiff;
 
   return (
-    <div className="flex items-center justify-center flex-col gap-4 w-full border border-love rounded-xl p-4">
+    <div className="flex items-center justify-center flex-col gap-4 w-full p-4">
       <div className="grid grid-cols-3 gap-4">
         {[
           { label: "Anos", value: years },
