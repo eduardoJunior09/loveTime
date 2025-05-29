@@ -8,10 +8,10 @@ export default function App() {
     <div className="flex items-center justify-center w-full">
       <div className="flex flex-col items-center justify-center gap-6 py-4 p-2 max-w-96 w-full h-full">
         <Header
-          image="https://www.psicologosberrini.com.br/wp-content/uploads/terapia-de-casal-amor-ou-costume.jpg"
-          firstPerson="eduardo"
-          secondPerson="iasmin"
-          descricao="texto de descrição"
+          image="/src/assets/04.jpg"
+          firstPerson="Eduardo"
+          secondPerson="Iasmin"
+          descricao="Com você, todos os dias têm sabor de amor."
         />
         <PhotoCarousel />
         <Temp />

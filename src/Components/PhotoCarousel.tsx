@@ -1,9 +1,13 @@
 import { useEffect, useState } from "react";
 
 const images = [
-  "https://blog.uniaoconstrucoes.com.br/wp-content/uploads/2022/12/apartamento-para-casal-jovem.jpeg",
-  "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688",
-  "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+  "/src/assets/01.jpg",
+  "/src/assets/02.jpg",
+  "/src/assets/03.jpg",
+  "/src/assets/04.jpg",
+  "/src/assets/05.jpg",
+  "/src/assets/06.jpg",
+  "/src/assets/07.jpg",
 ];
 
 export default function PhotoCarousel() {
@@ -25,30 +29,29 @@ export default function PhotoCarousel() {
   }, []);
 
   return (
-   <div className="flex items-center justify-center border border-love rounded-xl p-2 w-full max-w-sm">
-  <div className="relative w-full aspect-[9/16]">
-    <img
-      className="absolute top-0 left-0 w-full h-full object-cover rounded-xl"
-      src={images[currentIndex]}
-      alt={`Imagem ${currentIndex + 1}`}
-    />
+    <div className="flex items-center justify-center border border-love rounded-xl p-2 w-full max-w-sm">
+      <div className="relative w-full aspect-[9/16]">
+        <img
+          className="absolute top-0 left-0 w-full h-full object-cover rounded-xl"
+          src={images[currentIndex]}
+          alt={`Imagem ${currentIndex + 1}`}
+        />
+        {/* Botão Anterior */}
+        <button
+          onClick={prevImage}
+          className="absolute top-1/2 left-2 transform -translate-y-1/2 flex items-center justify-center bg-white text-gray-900 opacity-60 hover:opacity-90 rounded-full px-2 py-1 cursor-pointer"
+        >
+          <i className="bi bi-chevron-left"></i>
+        </button>
 
-    {/* Botão Anterior */}
-    <button
-      onClick={prevImage}
-      className="absolute top-1/2 left-2 transform -translate-y-1/2 flex items-center justify-center bg-white text-gray-900 opacity-60 hover:opacity-90 rounded-full px-2 py-1 cursor-pointer"
-    >
-      <i className="bi bi-chevron-left"></i>
-    </button>
-
-    {/* Botão Próximo */}
-    <button
-      onClick={nextImage}
-      className="absolute top-1/2 right-2 transform -translate-y-1/2 flex items-center justify-center bg-white text-gray-900 opacity-60 hover:opacity-90 rounded-full px-2 py-1 cursor-pointer"
-    >
-      <i className="bi bi-chevron-right"></i>
-    </button>
-  </div>
-</div>
-);
+        {/* Botão Próximo */}
+        <button
+          onClick={nextImage}
+          className="absolute top-1/2 right-2 transform -translate-y-1/2 flex items-center justify-center bg-white text-gray-900 opacity-60 hover:opacity-90 rounded-full px-2 py-1 cursor-pointer"
+        >
+          <i className="bi bi-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  );
 }
