@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 
 const images = [
-  "/src/assets/01.jpg",
-  "/src/assets/02.jpg",
-  "/src/assets/03.jpg",
-  "/src/assets/04.jpg",
-  "/src/assets/05.jpg",
-  "/src/assets/06.jpg",
-  "/src/assets/07.jpg",
+  "https://raw.githubusercontent.com/eduardoJunior09/loveTime/refs/heads/main/src/assets/01.jpg",
+  "https://raw.githubusercontent.com/eduardoJunior09/loveTime/refs/heads/main/src/assets/02.jpg",
+  "https://raw.githubusercontent.com/eduardoJunior09/loveTime/refs/heads/main/src/assets/03.jpg",
+  "https://raw.githubusercontent.com/eduardoJunior09/loveTime/refs/heads/main/src/assets/04.jpg",
+  "https://raw.githubusercontent.com/eduardoJunior09/loveTime/refs/heads/main/src/assets/05.jpg",
+  "https://raw.githubusercontent.com/eduardoJunior09/loveTime/refs/heads/main/src/assets/06.jpg",
+  "https://raw.githubusercontent.com/eduardoJunior09/loveTime/refs/heads/main/src/assets/07.jpg",
 ];
 
 export default function PhotoCarousel() {
