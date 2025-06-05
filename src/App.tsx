@@ -1,9 +1,22 @@
-import "./App.css";
+// src/App.jsx
+import { useEffect, useState } from "react";
 import Header from "./Components/Header";
 import PhotoCarousel from "./Components/PhotoCarousel";
 import Temp from "./Components/Temp";
+import SplashScreen from "./Components/Splashscreen";
 
 export default function App() {
+  const [showSplash, setShowSplash] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowSplash(false);
+    }, 4000); // 4 segundos
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (showSplash) return <SplashScreen />;
+
   return (
     <div className="flex items-center justify-center w-full">
       <div className="flex flex-col items-center justify-center gap-6 py-4 p-2 max-w-96 w-full h-full">
